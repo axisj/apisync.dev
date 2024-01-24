@@ -1,0 +1,46 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --error-color: #ff4d4f;
+  --primary-color: #1677ff;
+}
+
+a {
+  font-weight: 500;
+  color: #1677ff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #1677ff;
+}
+
+body {
+  margin: 0;
+}
+
+
+.ant-btn {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background: #ffffff;
+  border:1px solid #d9d9d9;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  line-height: 1.5714285714285714;
+  font-size: 14px;
+  height: 32px;
+  padding: 4px 15px;
+  border-radius: 6px;
+}
