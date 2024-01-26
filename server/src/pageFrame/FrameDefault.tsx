@@ -2,7 +2,7 @@ import { Nav } from "@/components/Nav";
 import { PageWrap } from "@/components/Styled";
 import { useUserStore } from "@/store/useUserStore";
 import styled from "@emotion/styled";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
 type FrameAuthType = "auth" | "noAuth";
