@@ -1,19 +1,45 @@
 {
-  "name": "apisync.dev",
-  "version": "1.0.0",
-  "description": "",
+  "name": "apisync.dev-server",
+  "version": "0.1.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run dev\""
+    "dev": "next dev -p ${PORT-7001}",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "",
-  "workspaces": [
-    "client",
-    "server"
-  ],
+  "dependencies": {
+    "@ant-design/cssinjs": "^1.18.2",
+    "@ctrl/tinycolor": "^4.0.2",
+    "@emotion/css": "^11.10.0",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@types/uuid": "^9.0.7",
+    "antd": "^5.12.8",
+    "axios": "^1.6.5",
+    "dompurify": "^3.0.8",
+    "i18next": "^23.7.13",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next-http-backend": "^2.4.2",
+    "lzutf8": "^0.6.3",
+    "next": "14.0.4",
+    "prettier": "^3.1.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-i18next": "^14.0.0",
+    "superjson": "^2.2.1",
+    "uuid": "^9.0.1",
+    "zustand": "^4.4.7"
+  },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "@types/dompurify": "^3.0.5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "eslint-config-next": "14.0.4",
+    "typescript": "^5.2.2"
   }
 }
