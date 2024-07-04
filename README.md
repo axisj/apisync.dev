@@ -1,4 +1,4 @@
-# APISync.dev [SERVER]
+# APISync.dev
 
 ```bash
 npm run dev
