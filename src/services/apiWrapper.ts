@@ -1,16 +1,21 @@
 import { ApiErrorCode } from "@/services/error";
-import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { getAppData, setAppData } from "@/store/appData";
+import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { ApiError } from "./ApiError";
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export const API_URL = process.env.API_URL ?? "http://localhost:8080";
+export const API_URL = (() => {
+  if (typeof window !== "undefined" && sessionStorage.getItem("isApiTest") === "T") {
+    return "http://127.0.0.1:8090";
+  }
+  return process.env.NEXT_PUBLIC_API_URL;
+})();
 
 //
-console.table({
-  API_URL,
-});
+// console.table({
+//   API_URL,
+// });
 
 const _axios = axios.create({
   baseURL: API_URL,
@@ -105,11 +110,17 @@ export const apiWrapper = async <P>(
         return await apiWrapper(method, route, body, config);
       }
     }
-    throw new ApiError(data.error.code, data.error.message, data.error.data);
+    throw new ApiError(data.error.code, data.error.message, data.error.data, data.data);
+  }
+
+  if (data) {
+    if ("page" in data) {
+      data.page.pageNumber = Math.min(data.page.pageNumber + 1, data.page.pageCount);
+    }
   }
 
   return { data: data as P, ...rest };
 };
 export const setApiHeader = (token: string) => {
-  _axios.defaults.headers.common["Authorization"] = token;
+  _axios.defaults.headers.common["Authorization"] = "Bearer " + token;
 };

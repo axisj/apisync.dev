@@ -29,7 +29,7 @@ export function FrameDefault({ auth, children }: Props) {
         router.back();
       }
     }
-  }, [auth, isLogin, router]);
+  }, [_hasHydrated, auth, isLogin, router]);
 
   if (auth) {
     if (auth === "auth" && !isLogin) {

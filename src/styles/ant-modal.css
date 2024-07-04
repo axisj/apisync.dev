@@ -2,8 +2,25 @@
     top: 65px;
 }
 
+.ant-modal .ant-modal-header {
+    padding: 12px 24px 10px 24px !important;
+    border-bottom: 1px solid var(--pastel-silver) !important;
+}
+.ant-modal .ant-modal-title {
+    color: #000;
+    font-family: var(--font-hana);
+    font-size: 24px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .ant-modal .ant-modal-content {
-    padding: 0;
+    padding: 0 !important;
+}
+
+.ant-modal .ant-modal-footer {
+    padding: 0 24px 20px 24px !important;
 }
 
 .ant-modal .ant-modal-close-x {

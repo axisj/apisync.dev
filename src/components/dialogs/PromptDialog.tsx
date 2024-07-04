@@ -64,7 +64,9 @@ function PromptModal({ open, onOk, onCancel, afterClose, params }: Props) {
   );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 20px 24px;
+`;
 const Body = styled.div`
   min-height: 50px;
 `;

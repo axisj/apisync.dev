@@ -131,7 +131,9 @@ export function DialogModal({ open, onCancel, onOk, afterClose, params }: Props)
   );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 20px 24px;
+`;
 const Header = styled.div<{ type: DialogType }>`
   ${SMixinFlexRow("flex-start", "center")};
   gap: 10px;
