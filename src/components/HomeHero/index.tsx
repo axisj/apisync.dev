@@ -10,9 +10,7 @@ import ThemedImage from "@theme/ThemedImage";
 
 
 export default function HomeHero(): JSX.Element {
-
-  // Current Color Mode...
-  const { isDarkTheme } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <header className={styles.heroContainer}>
@@ -31,7 +29,7 @@ export default function HomeHero(): JSX.Element {
               </p>
               <ConfigProvider
                 theme={{
-                  algorithm: isDarkTheme ? theme.darkAlgorithm : theme.compactAlgorithm,
+                  algorithm: colorMode === "dark" ? [theme.darkAlgorithm] : [],
                   token: {
                     // Seed Token
                     colorPrimary: '#F84552',

@@ -50,7 +50,7 @@ const BannerList: BannerItem[] = [
 
 export default function BannerSlider(): JSX.Element {
 
-  const { isDarkTheme } = useColorMode();
+  const { colorMode } = useColorMode();
 
   let sliderRef = useRef(null);
 
@@ -78,7 +78,7 @@ export default function BannerSlider(): JSX.Element {
         <div className={styles.sliderContainer}>
             <Slider ref={slider => (sliderRef = slider)} {...settings}>
             {BannerList.map((props, idx) => (
-              <div>
+              <div key={idx}>
                   <ThemedImage
                   alt={props.title}
                   sources={{
@@ -93,7 +93,7 @@ export default function BannerSlider(): JSX.Element {
         <div className={styles.buttonContainer}>
           <ConfigProvider
             theme={{
-              algorithm: isDarkTheme ? theme.darkAlgorithm : theme.compactAlgorithm,
+              algorithm: colorMode === "dark" ? theme.darkAlgorithm : theme.compactAlgorithm,
               token: {
                 // Seed Token
                 colorPrimary: '#F84552',
