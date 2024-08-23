@@ -1,0 +1,30 @@
+.banners{
+
+}
+.banners h3{
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+.banners p{
+    text-align: center;
+}
+
+.sliderContainer{
+    margin-bottom: 6rem;
+}
+
+.buttonContainer{
+    display: flex;
+    gap: 0.5rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*[data-theme='dark'] .slick-dots li button:before{*/
+/*    border:1px solid #f00;*/
+/*    color:white;*/
+/*}*/
+

@@ -46,8 +46,8 @@
 }
 
 .navbar__inner {
-  margin: 0 auto;
-  max-width: var(--ifm-container-width);
+  /*margin: 0 auto;*/
+  /*max-width: var(--ifm-container-width);*/
   /*padding: 0 var(--ifm-spacing-horizontal);*/
 }
 

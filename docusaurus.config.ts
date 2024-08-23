@@ -7,11 +7,11 @@ const config: Config = {
     mermaid: true
   },
   title: 'AXBoot.dev',
-  tagline: 'Bootstrap Your Admin with a Rich UI',
+  tagline: 'APISync',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://axboot.dev',
+  url: 'https://apisync.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -19,7 +19,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'axisj', // Usually your GitHub org/user name.
-  projectName: 'axboot.dev', // Usually your repo name.
+  projectName: 'apisync.dev', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -61,28 +61,31 @@ const config: Config = {
       title: 'axboot.dev',
       logo: {
         alt: 'AXBoot.dev Logo',
-        src: 'img/axb_logo.svg',
-        srcDark: 'img/axb_logo_dark.svg',
-        width: 126,
+        src: 'img/apisync_logo.svg',
+        srcDark: 'img/apisync_logo_dark.svg',
+        width: 164,
         height: 32,
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'apiSidebar',
-          position: 'left',
-          label: 'API',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/product', label: 'Product', position: 'left'},
+        {to: '/pricing', label: 'Pricing', position: 'left'},
+        {to: '/enterprise', label: 'Enterprise', position: 'left'},
         {to: '/success-stories', label: 'Case Study', position: 'left'},
-        {to: '/pricing', label: 'Store', position: 'left'},
+        {to: '/advanced', label: 'Advanced', position: 'left'},
         {to: '/get-in-touch', label: 'AXISJ', position: 'left'},
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'tutorialSidebar',
+        //   position: 'left',
+        //   label: 'Tutorial',
+        // },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'apiSidebar',
+        //   position: 'left',
+        //   label: 'API',
+        // },
+        // {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'localeDropdown',
           position: 'right',

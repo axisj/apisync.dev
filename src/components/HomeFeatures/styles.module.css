@@ -1,0 +1,42 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.featureImg {
+  max-width: 18.75rem;
+  max-height: 12.5rem;
+}
+
+.featureTitle{
+    font-size: 1.125rem;
+    border-bottom:0.063rem solid #EAEAEA;
+    margin:0;
+    padding:1rem 0 1rem 0;
+}
+
+
+.featureDesc{
+    padding:1rem 0 1rem 0;
+    margin:0;
+    font-size:0.875rem;
+    text-align: left;
+    word-break: keep-all;
+}
+
+.featureList{}
+.featureList h3{
+    font-weight: bold;
+    font-size:0.875rem;
+    color: #9A9A9A;
+}
+.featureList ul{
+    margin:0;
+    padding:0;
+    margin-left:1rem;
+    font-size:0.875rem;
+}
+
+

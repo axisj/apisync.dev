@@ -1,139 +1,44 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas, extend } from "@react-three/fiber";
-import { Astronaut } from "@site/src/components/Astronaut";
-import Galaxy, { BackgroundStars } from "@site/src/components/Galaxy";
-import HomepageExperts from "@site/src/components/HomepageExperts";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
-
-import HomepageTweets from "@site/src/components/HomepageTweets";
+import styles from './index.module.css';
 import Layout from "@theme/Layout";
 import AXBLogo from "@theme/ThemedImage";
 import clsx from "clsx";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
-import { useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import styles from "./index.module.css";
-
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
-extend({ MeshLineGeometry, MeshLineMaterial });
-useGLTF.preload("/img/astronaut.glb");
+import BannerSlider from "@site/src/components/BannerSlider";
+import HomeHero from "@site/src/components/HomeHero";
+import HomeFeatures from "@site/src/components/HomeFeatures";
 
 export default function App(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   // const { debug } = useControls({ debug: false })
 
-  const progressCircle = useRef(null);
-  const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty("--progress", 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  };
-
   return (
     <Layout title={`Home`} description='Description will go into a meta tag in <head />'>
-      <header className={styles.heroContainer}>
-        <div className={styles.heroLayer1}>
-          <Canvas
-            camera={{
-              position: [5000, 5000, 5000],
-              rotation: [-0.5, 0, 0],
-              far: 100000,
-            }}
-          >
-            <color attach='background' args={["#0f0f10"]} />
 
-            <Astronaut />
-
-            <ambientLight intensity={Math.PI} />
-            {/*<axesHelper args={[20000]}/>*/}
-            <OrbitControls enableZoom={false} />
-            <BackgroundStars />
-            <Galaxy />
-          </Canvas>
-        </div>
-        <div className={styles.heroLayer2}>
-          <span>
-            Float on the universe with{" "}
-            <span className={styles.brandName}>
-              <b>AXB</b>OOT
-            </span>
-          </span>
-        </div>
-      </header>
-
-      <div className={styles.axbcWrapper}>
-        <div className={styles.axbcFloater}>
-          <div className='container'>
-            <div className='row'>
-              <div className={clsx("col col--8")}>
-                <div className='text--center'>
-                  <Swiper
-                    spaceBetween={0}
-                    centeredSlides={true}
-                    autoplay={{
-                      delay: 5000,
-                      disableOnInteraction: false,
-                    }}
-                    pagination={{
-                      clickable: true,
-                    }}
-                    navigation={true}
-                    modules={[Autoplay, Pagination, Navigation]}
-                    onAutoplayTimeLeft={onAutoplayTimeLeft}
-                    className={styles.axbcImgDiv}
-                  >
-                    <SwiperSlide>
-                      <img className={styles.axbcImg} alt={"대표 이미지"} src={"/img/axboot_c.png"} loading='lazy' />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img className={styles.axbcImg} alt={"대표 이미지"} src={"/img/axboot_c.png"} loading='lazy' />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img className={styles.axbcImg} alt={"대표 이미지"} src={"/img/axboot_c.png"} loading='lazy' />
-                    </SwiperSlide>
-
-                    <div className='autoplay-progress' slot='container-end'>
-                      <svg viewBox='0 0 48 48' ref={progressCircle}>
-                        <circle cx='24' cy='24' r='20'></circle>
-                      </svg>
-                      <span ref={progressContent}></span>
-                    </div>
-                  </Swiper>
-                </div>
-              </div>
-              <div className={clsx("col col--4")}>
-                <div className={styles.axbcDescBox}>
-                  <AXBLogo
-                    className={styles.axbcLogo}
-                    alt={"AXBoot logo"}
-                    sources={{
-                      light: useBaseUrl("/img/axb_logo.svg"),
-                      dark: useBaseUrl("/img/axb_logo_dark.svg"),
-                    }}
-                  />
-                  <div>
-                    액스부트(AXBoot)는 확장성과 유지 관리 용이성을 갖춘 웹 애플리케이션 구축을 위해 다양한 내장 UI 구성
-                    요소와 도구 및 라이브러리 세트를 제공하는 고도로 모듈화된 웹 애플리케이션 프레임워크입(WAF)니다.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <HomeHero />
       <main>
-        <HomepageFeatures />
-        <HomepageTweets />
-        <HomepageExperts />
+        <div className="container">
+            <div className={styles.defBox}>
+              <h2>What is APISync?</h2>
+              <p>APISync은 API를 빌드하고 사용하기 위한 API 플랫폼입니다.<br />
+                APISync은 API 라이프사이클의 각 단계를 간소화하고 협업을 간소화하여 더 나은 API를 더 빠르게 만들 수 있습니다.</p>
+            </div>
+        </div>
+
+        <HomeFeatures />
+
+        <BannerSlider />
+
       </main>
     </Layout>
-  );
+);
 }
