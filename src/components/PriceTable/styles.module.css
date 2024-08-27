@@ -1,0 +1,78 @@
+
+.segmentWrap{
+    text-align: center;
+    padding:1rem 0 3rem 0;
+}
+.segment{
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*border:1px solid #00f;*/
+}
+.segmentItem{
+    display: flex;
+    flex-direction: column;
+    line-height: 1rem;
+    height: 4rem;
+    min-width: 6rem;
+    padding:0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.segmentItemDesc{
+    font-size: 0.75rem;
+}
+
+.priceBox{
+
+}
+.priceBox .heading{
+    min-height: 10rem;
+}
+.priceBox h3{
+    text-align: center;
+    font-size:1.125rem;
+    margin:0;
+    padding:0.25rem 0;
+}
+.priceBox .price{
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+    padding:0.25rem 0;
+}
+.priceBox .price span{
+    font-size: 0.75rem;
+}
+.priceBox .price span:first-child{
+    color: #9A9A9A;
+    font-weight: normal;
+}
+.priceBox .buttons {
+    text-align: center;
+    padding:1rem 0;
+}
+.priceBox .desc{
+    font-size:0.938rem;
+    padding: 1rem 0;
+    word-break: keep-all;
+    border-top:0.063rem solid #EAEAEA;
+}
+.priceBox .listTitle{
+    text-align: left;
+    font-size:0.875rem;
+    font-weight: bold;
+    color:#9A9A9A;
+    margin:0;
+    padding:0.5rem 0;
+}
+
+.priceBox .includeList{}
+.priceBox .includeList ul{
+    margin:0 0 0.5rem 1rem;
+    padding:0;
+    font-size: 0.875rem;
+}

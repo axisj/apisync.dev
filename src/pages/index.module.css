@@ -9,7 +9,9 @@
   word-break: keep-all;
 }
 
-
+.priceHeader{
+  text-align: center;
+}
 
 /*Override...*/
 

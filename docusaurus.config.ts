@@ -70,7 +70,6 @@ const config: Config = {
         {to: '/product', label: 'Product', position: 'left'},
         {to: '/pricing', label: 'Pricing', position: 'left'},
         {to: '/enterprise', label: 'Enterprise', position: 'left'},
-        {to: '/success-stories', label: 'Case Study', position: 'left'},
         {to: '/advanced', label: 'Advanced', position: 'left'},
         {to: '/get-in-touch', label: 'AXISJ', position: 'left'},
         // {

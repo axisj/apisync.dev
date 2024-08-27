@@ -51,3 +51,7 @@
 .dnBox a:hover{
     background-color:#eaeaea;
 }
+
+[data-theme='dark'] .dnBox a:hover{
+    background-color:#000000;
+}

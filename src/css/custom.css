@@ -114,3 +114,12 @@
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
+
+[data-theme='dark'] .slick-dots li button:before{
+  color:white;
+}
+
+
+[data-theme='dark'] .slick-dots li.slick-active button:before {
+  color:white;
+}

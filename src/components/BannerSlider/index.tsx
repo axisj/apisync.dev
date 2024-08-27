@@ -93,7 +93,7 @@ export default function BannerSlider(): JSX.Element {
         <div className={styles.buttonContainer}>
           <ConfigProvider
             theme={{
-              algorithm: colorMode === "dark" ? theme.darkAlgorithm : theme.compactAlgorithm,
+              algorithm: colorMode === "dark" ? [theme.darkAlgorithm] : [],
               token: {
                 // Seed Token
                 colorPrimary: '#F84552',

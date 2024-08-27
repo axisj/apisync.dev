@@ -81,10 +81,12 @@ export default function HomeHero(): JSX.Element {
 
           </div>
           <div className={clsx("col col--7") + " " + styles.aligner}>
-            <img
-              className={styles.heroImg}
-              alt={"hero"}
-              src={"/img/hero.png"}
+            <ThemedImage
+              alt={"Windows"}
+              sources={{
+                light: useBaseUrl("/img/hero.png"),
+                dark: useBaseUrl("/img/hero_dark.png"),
+              }}
             />
           </div>
         </div>
